@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuraCharm</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="photos/cover.png" alt="AuraCharm Logo" class="logo-img">
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products..." />
+    </div>
+
+    <div class="nav-right">
+  <a href="cart.html"><button class="cart-btn">Cart</button></a>
+  <a href="login.html"><button class="login-btn" id="login-btn">Login</button></a>
+  <a href="signup.html"><button class="cart-btn" id="signup-btn">Create account</button></a>
+  <button class="login-btn" id="logout-btn" style="display: none;">Logout</button>
+</div>
+
+  </nav>
+  <section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to AuraCharm</h1>
+    <p>Unleash your creativity with our magical stationery collection</p>
+    <a href="#featured" class="cta-button">Shop Now</a>
+  </div>
+</section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-products">
+    <h2><i class="fas fa-star"></i> Featured Products</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="photos/pens.jpg" alt="Glitter Gel Pens" class="product-img">
+        <h3>Glitter Gel Pens</h3>
+        <p>Bright & sparkly writing set.</p>
+        <button onclick="addToCart('Glitter Gel Pens',149)">Add to Cart</button>
+        <p class="price">₹149</p>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="photos/book.jpg" alt="Floral Notebook" class="product-img">
+        <h3>Floral Notebook</h3>
+        <p>Soft-touch cover with premium pages.</p>
+        
+        <button onclick="addToCart('Floral Notebook', 189)">Add to Cart</button>
+        <p class="price">₹189</p>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="photos/sticker.jpg" alt="Charm Stickers" class="product-img">
+        <h3>Charm Stickers</h3>
+        <p>Decorate your world with style!</p>
+        <button onclick="addToCart('Charm Stickers', 249)">Add to Cart</button>
+        <p class="price">₹249</p>
+      </div>
+
+    </div>
+  </section>
+  
+
+<!-- Rotating Offers Banner -->
+<section class="offer-banner">
+  <div class="offer-container" id="offerContainer">
+    
+    <!-- Offer 1 -->
+    <div class="offer-item active">
+      <img src="photos/pens.jpg" alt="Pens Offer">
+      <p><i class="fas fa-gift"></i> Buy 2 Gel Pens, Get 1 Free!</p>
+    </div>
+
+    <!-- Offer 2 -->
+    <div class="offer-item">
+      <img src="photos/book.jpg" alt="Notebook Offer">
+      <p><i class="fas fa-tags"></i> 20% Off on All Notebooks – This Week Only!</p>
+    </div>
+
+    <!-- Offer 3 -->
+    <div class="offer-item">
+      <img src="photos/sticker.jpg" alt="Stickers Offer">
+      <p><i class="fas fa-fire"></i> Trending Stickers – From ₹49!</p>
+    </div>
+
+    <!-- Offer 4 -->
+    <div class="offer-item">
+      <img src="photos/default.png" alt="Free Shipping">
+      <p><i class="fas fa-truck"></i> Free Shipping on Orders Above ₹499</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="beauty-products">
+  <h2>Beauty & Jewellery</h2>
+  <div class="products-container">
+    <!-- Makeup Product -->
+    <div class="product-card">
+      <img src="photos/lipstick.jpg" alt="Lipstick">
+      <h3>Matte Lipstick</h3>
+      <p>₹299</p>
+      <button onclick="addToCart('Matte Lipstick', 299)">Add to Cart</button>
+    </div>
+
+    <!-- Skincare Product -->
+    <div class="product-card">
+      <img src="photos/cream.jpg" alt="Moisturizer">
+      <h3>Face Moisturizer</h3>
+      <p>₹399</p>
+     <button onclick="addToCart('Face Moisturizer', 399)">Add to Cart</button>
+    </div>
+
+    <!-- Jewellery Product -->
+    <div class="product-card">
+      <img src="photos/studs.jpg" alt="Studs">
+      <h3>Stud Earrings</h3>
+      <p>₹199</p>
+      <button onclick="addToCart('Stud Earrings', 199)">Add to Cart</button>
+    </div>
+
+    <!-- More Products -->
+    <div class="product-card">
+      <img src="photos/facewash.jpg" alt="Face Wash">
+     <h3>Herbal Face Wash</h3>
+      <p>₹149</p>
+      <button onclick="addToCart('Herbal Face Wash', 149)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="photos/bangles.jpg" alt="Bangles">
+      <h3>Gold-plated Bangles</h3>
+      <p>₹599</p>
+      <button onclick="addToCart('Gold-plated Bangles', 599)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="photos/eye.jpg" alt="eye shadow palette">
+      <h3>Eye shadow palette</h3>
+      <p>₹249</p>
+      <button onclick="addToCart('eye shadow palette', 249)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const offers = document.querySelectorAll('.offer-item');
+  let index = 0;
+
+  setInterval(() => {
+    offers[index].classList.remove('active');
+    index = (index + 1) % offers.length;
+    offers[index].classList.add('active');
+  }, 3000); 
+</script>
+
+  <script>
+  function addToCart(name, price) {
+    
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn !== 'true') {
+      alert('Please login to add items to your cart.');
+      window.location.href = 'login.html';
+      return;
+    }
+
+  if (!name || isNaN(price)) {
+    console.warn('Invalid item:', name, price);
+    return; // Prevent adding undefined or NaN
+  }
+
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart = cart.filter(item => item && item.name && !isNaN(item.price));
+
+  const existingItem = cart.find(item => item.name === name);
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ name, price, quantity: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert(`${name} added to cart!`);
+}
+
+</script>
+
+
+
+  <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-column">
+      <h3>AuraCharm</h3>
+      <p>Your one-stop shop for all things stationery—charming, creative, and colorful.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>Email: support@auracharm.com</p>
+      <p>Phone: +91-98765-43210</p>
+      <p>Address: Hyderabad, Telangana, India</p>
+    </div>
+
+    <!-- Social & Newsletter -->
+    <div class="footer-column">
+      <h4>Stay Connected</h4>
+      <form>
+        <input type="email" placeholder="Subscribe to Newsletter" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AuraCharm. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  // Show/hide login/logout buttons based on login status
+  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  const logoutBtn = document.getElementById('logout-btn');
+  const loginBtn = document.getElementById('login-btn');
+  const signupBtn = document.getElementById('signup-btn');
+
+  if (isLoggedIn) {
+    logoutBtn.style.display = 'inline-block';
+    if (loginBtn) loginBtn.style.display = 'none';
+    if (signupBtn) signupBtn.style.display = 'none';
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('loggedInUser');
+      alert('Logged out successfully!');
+      location.reload();
+    });
+  }
+</script>
+
+
+
+</body>
+</html>
